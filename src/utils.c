@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 // Safe integer input
 int getInt() {
     int n;

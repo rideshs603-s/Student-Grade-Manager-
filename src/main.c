@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "../include/student.h"
 
+
 int main() {
     Student students[100];
     int count = 0;

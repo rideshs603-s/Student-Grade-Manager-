@@ -29,3 +29,31 @@ void displayStudents(Student students[], int count) {
     }
     if(count == 0) printf("No students added yet!\n");
 }
+void searchStudent(Student students[], int count, int roll) {
+    int found = 0;
+    for (int i = 0; i < count; i++) {
+        if (students[i].roll == roll) {
+            printf("Found: Roll: %d, Name: %s, Marks: %.2f, Grade: %c\n",
+                   students[i].roll, students[i].name, students[i].marks, students[i].grade);
+            found = 1;
+            break;
+        }
+    }
+    if(!found) printf("Student with roll %d not found.\n", roll);
+}
+
+void updateStudent(Student students[], int count, int roll) {
+    int found = 0;
+    for(int i = 0; i < count; i++) {
+        if(students[i].roll == roll) {
+            printf("Enter new marks for %s: ", students[i].name);
+            scanf("%f", &students[i].marks);
+            students[i].grade = calculateGrade(students[i].marks);
+            printf("Student updated successfully!\n");
+            found = 1;
+            break;
+        }
+    }
+    if(!found) printf("Student with roll %d not found.\n", roll);
+}
+

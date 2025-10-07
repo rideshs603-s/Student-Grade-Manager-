@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "student.h"
 
+
 // Calculate grade based on marks
 char calculateGrade(float marks) {
     if (marks >= 90) return 'A';
